@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* -----------------------------
+   CSS Variables for Theme
+------------------------------ */
+@layer base {
+  :root {
+    /* Light / default mode */
+    --background: 15 17 26;       /* dark bluish background */
+    --foreground: 230 230 230;    /* light text */
+    --card: 26 28 44;             /* card background */
+    --card-foreground: 255 255 255;
+    --popover: 40 40 60;
+    --popover-foreground: 230 230 230;
+    --primary: 51 51 0;           /* gold */
+    --primary-foreground: 255 215 0;
+    --secondary: 50 50 60;
+    --secondary-foreground: 200 200 200;
+    --muted: 80 80 80;
+    --muted-foreground: 150 150 150;
+    --accent: 180 255 240;        /* neon teal */
+    --accent-foreground: 0 0 0;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 255 255 255;
+    --border: 100 100 100;
+    --input: 240 240 240;
+    --ring: 200 200 200;
+    --chart-1: 51 204 255;
+    --chart-2: 255 153 51;
+    --chart-3: 153 102 255;
+    --chart-4: 255 51 102;
+    --chart-5: 102 255 51;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* Dark mode */
+    --background: 15 17 26;
+    --foreground: 230 230 230;
+    --card: 26 28 44;
+    --card-foreground: 255 255 255;
+    --popover: 40 40 60;
+    --popover-foreground: 230 230 230;
+    --primary: 255 215 0;        /* gold for headings/buttons */
+    --primary-foreground: 51 51 0;
+    --secondary: 50 50 60;
+    --secondary-foreground: 200 200 200;
+    --muted: 80 80 80;
+    --muted-foreground: 150 150 150;
+    --accent: 0 255 255;         /* neon teal */
+    --accent-foreground: 0 0 0;
+    --destructive: 255 51 51;
+    --destructive-foreground: 255 255 255;
+    --border: 100 100 100;
+    --input: 40 40 60;
+    --ring: 180 180 180;
+    --chart-1: 51 204 255;
+    --chart-2: 255 153 51;
+    --chart-3: 153 102 255;
+    --chart-4: 255 51 102;
+    --chart-5: 102 255 51;
+  }
+}
+
+/* -----------------------------
+   Apply border & background defaults
+------------------------------ */
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground ;
+  }
+}
+
+/* -----------------------------
+   Gradient text utilities
+------------------------------ */
+.text-gradient-gold {
+  background: linear-gradient(90deg, #FFD700, #FFA500);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* -----------------------------
+   Glow effects
+------------------------------ */
+.glow-teal {
+  box-shadow: 0 0 10px #00FFF0, 0 0 20px #00FFF0;
+}
+
+.glow-gold {
+  box-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700;
+}
